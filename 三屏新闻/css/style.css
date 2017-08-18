@@ -1,0 +1,44 @@
+*{margin:0;padding:0}
+body{font:40px/60px Arial,Helvetica,sans-serif;}
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+.box{
+		height: 1080px;
+		background:url(../img/dynamicbackdrop@1x.png);
+		background-repeat:no-repeat;
+		background-size:100% 100%;
+		padding:60px;
+		color: #fff;
+		/*行数*/
+		-moz-column-count:3; /* Firefox */
+		-webkit-column-count:3; /* Safari 和 Chrome */
+		column-count:3;
+		/*行间距*/
+		-moz-column-gap:60px; /* Firefox */
+		-webkit-column-gap:60px; /* Safari 和 Chrome */
+		column-gap:60px;
+		/*行宽*/
+		/*-moz-column-width: 500px;
+		-webkit-column-width:500px;
+		column-width: 500px;*/
+		z-index: 999;
+	    position: fixed;
+	    left: 0;
+	    width: 1800px;
+	    height: 1080px;
+	    overflow: hidden;
+	}
+.title{
+	text-align: center;
+	margin-bottom: 30px;
+	font-size: 45px;
+}
+.caption-img{
+	text-align: center;
+}
+.caption-img img{
+	width: 742px;
+    height: 382px;
+}
+.box-h3{
+	margin-top: 45px;
+}

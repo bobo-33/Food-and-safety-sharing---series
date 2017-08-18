@@ -1,0 +1,27 @@
+body,div,h1,h2,html,p,span,ul,ol{margin:0;padding:0;border:0;outline:0}
+body{font:14px/24px Arial,Helvetica,sans-serif}
+*{-webkit-tap-highlight-color:transparent;outline:0}
+ul{list-style:none}
+a{text-decoration: none;}
+@font-face {
+  font-family: 'iconfont';  /* project id 382806 */
+  src: url('http://at.alicdn.com/t/font_382806_twq3b6tnbgxh6w29.eot');
+  src: url('http://at.alicdn.com/t/font_382806_twq3b6tnbgxh6w29.eot?#iefix') format('embedded-opentype'),
+  url('http://at.alicdn.com/t/font_382806_twq3b6tnbgxh6w29.woff') format('woff'),
+  url('http://at.alicdn.com/t/font_382806_twq3b6tnbgxh6w29.ttf') format('truetype'),
+  url('http://at.alicdn.com/t/font_382806_twq3b6tnbgxh6w29.svg#iconfont') format('svg');
+}
+[class*=icon-]:after,[class^=icon_]:after,[class*=icon-]:before,[class^=icon_]:before,.news-list li dd span:before,.bottom-ul a:first-child li:before,.bottom-ul a:nth-child(2) li:before,.bottom-ul a:last-child li:before,.comment div:before,.food-call:before,.food-lable:after, .pf span:before,.pf div:before,.address div:before,.address p:before,.role a:before{font-family:iconfont!important;font-style:normal;-webkit-font-smoothing:antialiased}
+.icon-left:before { content: "\e623";}
+.icon-share:before { content: "\e607";}
+.header{width:100%;position:fixed;top:0;z-index:999;}
+.header .top{height:50px;background:#33CC66;color:#fff;font-size:18px;line-height:50px;text-align: center;position: relative;}
+.header .top .icon-left:before{color:#fff; position: absolute;left: 10px;font-size: 24px;}
+.header .top .icon-share:before{color:#fff; position: absolute;right: 10px;font-size: 24px;}
+.main{margin-top: 50px;}
+.line{background-image:-webkit-linear-gradient(#ddd, #ddd 50%, transparent 50%);background-image:-webkit-gradient(linear, 0 0, 100% 0, from(#ddd), color-stop(0.5, #ddd), color-stop(0.5, transparent));background-image:linear-gradient(#ddd, #ddd 50%, transparent 50%);background-size:100% 1px;background-repeat:no-repeat;background-position:bottom}
+.article{padding: 10px;}
+.article h1{font-weight: normal;font-size: 18px;}
+.article span{font-size: 12px;color: #999;}
+.article .line{height: 1px;margin: 5px 0;}
+.article p>img{width: 100%;padding: 10px 0;}
