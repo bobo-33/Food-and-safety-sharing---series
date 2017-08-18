@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">		
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css"/>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="top"><a class="icon-font icon-left" href="javascript:history.go(-1);"></a>文章详情<a class="icon-font icon-share" href=""></a></div>
+	</div>
+	<div class="main">
+		<div class="article"></div>
+	</div>
+	<div class="bottom">
+		<ul class="bottom-ul comment">
+			<div><input type="text" /></div>
+			<a href="comment.html"></a>
+    	</ul>
+	</div>
+	<script type="text/javascript">
+//		var d=new Date();
+//		var year=d.getFullYear();
+//		var mon=d.getMonth();
+//		var day=d.getDate();
+//		data.innerHTML=year+"-"+mon+"-"+day;
+		$(function(){
+			function demopage_switchslider(){  
+			    news_id=window.location.href.substring(window.location.href.indexOf('#')+1);  
+			    if(news_id!==undefined&&news_id!==''&&window.location.href.indexOf('#')>0){  
+			        getNews(news_id);//根据截取的id读取相应json
+			    }  
+			} 
+			demopage_switchslider();//截取url中#后面的内容		
+			console.log(news_id)
+			function getNews(news_id){
+				var url="../json/2.json";
+				$.get(url,function(res){
+					if(res.status=="success"&&res.status_code=="200"){
+						console.log(res.object.length)
+						for(var i=0;i<res.object.length;i++){
+							if(res.object[i].id==news_id){
+								console.log(i);
+								var HTML="";
+								HTML+="<h1>"+res.object[i].title+"</h1>";
+								HTML+="<span id='data'>"+res.object[i].time+"</span>";
+								HTML+="<div class='line'></div>"
+								HTML+="<p>"+res.object[i].content+"</p>";
+								$(".article").html(HTML);
+								$('.comment a').html(res.object[i].comment);
+							}
+
+						
+						}
+					}
+				})
+			}
+		})
+	</script>
+</body>
+</html>

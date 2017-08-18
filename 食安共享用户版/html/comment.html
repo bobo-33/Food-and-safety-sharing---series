@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">		
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css"/>
+   	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="top"><a class="icon-font icon-left" href="javascript:history.go(-1);"></a>全部评论</div>
+	</div>
+	<div class="main">
+		<ul class="news-list comment-list"></ul>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+				var url="../json/3.json";
+				$.get(url,function(res){
+					if(res.status=="success"&&res.status_code=="200"){
+						console.log(res)
+						$.each(res.object, function(i,item) {
+							console.log(i)
+							var HTML="";
+							HTML+="<li><img src='../"+item.user_img+"'/>";
+							HTML+="<dl><dd class='f14'>"+item.user_name+"</dd>";
+							HTML+="<dd>"+item.time+"</dd>";
+							HTML+="<dt>"+item.comment_content+"</dt></dl></li>"
+							$(".comment-list").append(HTML);
+						});
+
+					}
+				})
+			
+		})
+	</script>
+</body>
+</html>

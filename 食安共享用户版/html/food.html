@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">		
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css"/>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="top"><a class="icon-font icon-left" href="javascript:history.go(-1);"></a>美食<a class="icon-font icon-ld" href=""></a></div>
+	</div>
+	<div class="main">
+		<div class="swiper-container">
+	        <div class="swiper-wrapper">
+	            <div class="swiper-slide"><img src="../img/7.jpg" alt="" /></div>
+	            <div class="swiper-slide"><img src="../img/7.jpg" alt="" /></div>	           
+	        </div>
+	        <!-- Add Pagination -->
+	        <div class="swiper-pagination"></div>
+	    </div>
+		<div class="space"></div>
+		<ul class="food-list">
+			<li data-title = "中餐"><img src="../img/7.jpg"/></li>
+			<li data-title = "中餐"><img src="../img/7.jpg"/></li>
+			<li data-title = "中餐"><img src="../img/7.jpg"/></li>
+			<li data-title = "中餐"><img src="../img/7.jpg"/></li>
+			<li data-title = "中餐"><img src="../img/7.jpg"/></li>
+			<li data-title = "中餐"><img src="../img/7.jpg"/></li>
+			<li data-title = "中餐"><img src="../img/7.jpg"/></li>
+			<li data-title = "中餐"><img src="../img/7.jpg"/></li>
+		</ul>
+		<div class="space"></div>
+		<ul class="food-line">
+			<!--<a href="restaurant.html">
+				<li>
+		    		<img src="../img/7.jpg"/>
+		    		<dl>
+		    			<dt>阿拉提西域文化主题餐厅斜塘老街店</dt>
+		    			<dd class="food-lable"><span>中餐</span><b>斜塘老街</b></dd>
+		    			<dd class="food-call">83665523</dd>
+		    		</dl>
+		    	</li>
+			</a>-->
+	    	
+	    </ul>
+	</div>
+
+	<script type="text/javascript">
+		$(function(){
+		//	图片高度
+			$('.swiper-wrapper img').height($(window).width()/2);			
+		    	var swiper = new Swiper('.swiper-container', {
+		    	autoplay: 1000,//可选选项，自动滑动
+		        pagination: '.swiper-pagination',
+		        paginationClickable: true
+		    });
+		    
+		    var url="../json/4.json";
+		    $.get(url,function(res){
+		    	var HTML="";
+		    	var arr=[];
+		    	$.each(res.object, function(i,item) {
+		    		HTML+="<a id='"+item.id+"'><li>";
+			    	HTML+="<img src='../"+item.img+"'/>";
+			    	HTML+="<dl>";
+			    	HTML+="<dt>"+item.name+"</dt>";
+			    	HTML+="<dd class='food-lable'><span>"+item.type_1+"</span><b>"+item.type_2+"</b></dd>";
+			    	HTML+="<dd class='food-call'>"+item.phone+"</dd>";
+			    	HTML+="</dl>";
+			    	HTML+="</li></a>";
+			    	$('.food-line').html(HTML);
+			    	arr.push(item.id)
+		    	});
+		    	console.log(arr);
+		    	$('.food-line a').click(function(){
+		    		window.location="restaurant.html#"+arr[$(this).index()];
+		    	})
+		    	
+		    })
+		    
+		});
+	</script>
+</body>
+</html>

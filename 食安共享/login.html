@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="@JudaMedia">
+<title>后端管理</title>
+<link href="css/framework.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="http://at.alicdn.com/t/font_pon1536oo1e2ke29.css" rel="stylesheet" type="text/css" />
+<link href="http://at.alicdn.com/t/font_14rmhu5nuxzjjor.css" rel="stylesheet" type="text/css" />		
+<script src="js/jquery.js"></script>
+<script src="js/script.js"></script>
+</head>
+<body>
+	<div class="login">		
+		<div class="container"><p class="login-title"><img src="img/logo1.png"/></p></div>
+		<div class="login-img">
+			<form action="" method="post" id="formSubmit">
+				<div class="login_main">
+					<p class="info" style="display: block">密码错误</p>
+					<p class="adm"><i></i><input type="text" name="username"/></p>
+					<p class="pwd"><i></i><input type="password" name="password"/></p>
+					<input type="button" value="登录" onclick="formSubmit()" />
+					<p class="retrive"><a href="">忘记密码?</a></p>
+				</div>
+			</form>
+		</div>
+		<div class="container">
+			<div class="login-contact">
+				<div>
+					<dl><dt>食安共享app</dt><dd>餐厅端下载</dd></dl>
+					<img src="img/que.png" alt="" />
+				</div>
+				<div>
+					<dl><dt>食安共享app</dt><dd>客户端下载</dd></dl>
+					<img src="img/que.png" alt="" />
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="login-footer">
+				<p>Copyright©2017 苏州食安共享信息技术有限公司 版权所有 蜀ICP备10000000号-1</p>
+				<p>网址：www.shiangongxiang.com / 地址：苏州市独墅湖东平路281号宏智大厦402室 / 电话：13701308707 / 邮件：wypyw@sina.com</p>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	function formSubmit() {
+		$('#formSubmit').submit();
+	}
+</script>
+</html>

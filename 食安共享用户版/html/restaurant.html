@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">		
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="top"><a class="icon-font icon-left" href="javascript:history.go(-1);"></a>餐厅详情<a class="icon-font icon-collect" href=""></a></div>
+	</div>
+	<div class="main">
+		<div  class="user"></div>
+		<div class="pf">
+			<p><span data-title="优秀" data-font="&#xe614" class="great"></span><span data-title="良好" data-font="&#xe608" class="well"></span><span data-title="一般" data-font="&#xe611" class="soso"></span></p>
+		</div>
+		<div class="address">
+			<div data-font="&#xe620" class="great"></div>
+		</div>
+		<div class="space"></div>
+		<div class="role">
+			<a data-title="服务员" data-font="&#xe60e" ></a>
+			<a data-title="厨师" data-font="&#xe653" ></a>
+			<div class="line"></div>
+			<a data-title="特色菜" data-font="&#xe60b" ></a>
+			<a data-title="明厨亮灶" data-font="&#xe68c" ></a>
+			<div class="line-l"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(function(){
+			$('.user').height($(window).width()/2);	
+			
+			function demopage_switchslider(){  
+			    name_id=window.location.href.substring(window.location.href.indexOf('#')+1);  
+			    if(name_id!==undefined&&name_id!==''&&window.location.href.indexOf('#')>0){  
+			        getRestaurant(name_id);//根据截取的id读取相应json
+			    }  
+			} 
+			demopage_switchslider();//截取url中#后面的内容
+			function getRestaurant(name_id){
+				var url="../json/5.json";
+				$.get(url,function(res){
+					if(res.status=="success"&&res.status_code=="200"){
+						console.log(res.object.length)
+						for(var i=0;i<res.object.length;i++){
+							if(res.object[i].id==name_id){
+								console.log(i);
+								$('.user').html("<img src='../"+res.object[i].img+"'/><p>"+res.object[i].name+"</p><div><span>"+res.object[i].type_1+"</span><b>"+res.object[i].type_2+"</b></div>");
+								$('.address div').before("<p>"+res.object[i].address+"</p>");
+								if(res.object[i].grade=="C"){
+									$('.pf p').before("<div data-font='&#xe614' class='soso'></div>");
+									
+									
+								}else if(res.object[i].grade=="B"){
+									$('.pf p').before("<div data-font='&#xe614' class='well'></div>");
+								}else{
+									$('.pf p').before("<div data-font='&#xe614' class='great'></div>");
+								}
+							}
+
+						
+						}
+					}
+				})
+			}
+		});
+	</script>
+</body>
+</html>

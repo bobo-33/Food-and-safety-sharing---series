@@ -1,0 +1,27 @@
+{
+    "status": "success",
+    "status_code": "200",
+    "object":[
+    	{
+    		"id": "a1",
+    		"img": "img/7.jpg",
+    		"name": "阿拉提西域文化主题餐厅斜塘老街店",
+    		"type_1": "中餐",
+    		"type_2": "斜塘老街",
+	        "address": "姑苏区,广济南路西城永捷4楼A409",
+	        "grade":  "A"
+	        
+	    },
+	    {
+	    	"id": "b1",
+	    	"img": "img/2.jpeg",
+    		"name": "斯琴阿妈奶茶馆",
+    		"type_1": "蒙餐",
+    		"type_2": "哈达街街",
+	         "address": "红山区哈达西街XXXXXX",
+	         "grade":  "C"
+	    }
+    ]
+    
+    
+}
