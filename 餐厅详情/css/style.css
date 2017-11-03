@@ -1,0 +1,249 @@
+body,div,h1,h2,html,p,span,ul,ol{margin:0;padding:0;border:0;outline:0}
+body{font:14px/24px Arial,Helvetica,sans-serif}
+*{-webkit-tap-highlight-color:transparent;outline:0}
+ul{list-style:none}
+a{text-decoration: none;}
+@font-face {
+  font-family: 'iconfont';  /* project id 396365 */
+  src: url('//at.alicdn.com/t/font_396365_w1lq237fj4np14i.eot');
+  src: url('//at.alicdn.com/t/font_396365_w1lq237fj4np14i.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_396365_w1lq237fj4np14i.woff') format('woff'),
+  url('//at.alicdn.com/t/font_396365_w1lq237fj4np14i.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_396365_w1lq237fj4np14i.svg#iconfont') format('svg');
+}
+.user-grade a:before,
+.user-grade p span:before,
+.user-address p:before,
+.user-address a:after,
+.user-role a:before{
+	font-family: iconfont!important;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+}
+.space{display:block;width:100%;min-height:12px;background-color:#fafafa;background-image:-webkit-linear-gradient(180deg, #ddd, #ddd 50%, transparent 50%);background-image:-webkit-gradient(linear, 100% 0, 0 0, from(#ddd), color-stop(0.5, #ddd), color-stop(0.5, transparent));background-image:linear-gradient(180deg, #ddd, #ddd 50%, transparent 50%),linear-gradient(0deg,#ddd,#ddd 50%,transparent 50%);background-size:100% 1px,100% 1px;background-repeat:no-repeat;background-position:top,bottom}
+.user-info,
+.user-grade,
+.user-address,
+.user-role,
+.user-role a,
+.server-info,
+.server-info li p{
+		display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.user-grade,
+.user-address,
+.user-role,
+.server-info,
+.server-info li p{
+		-webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.user-address a:after,
+.user-role div:after{
+	background-image: linear-gradient(90deg,#ccc,#ccc 50%,transparent 50%);
+  background-size: 1px 100%;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.user-role div:before,
+.server-title{
+	background-image: linear-gradient(#ccc, #ccc 50%, transparent 50%);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+
+
+
+
+
+/**********************/
+.user-info{
+		background: #33cc66;
+    color: #fff;
+}
+.user-info img{
+		width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+.user-info h3{
+		margin: 10px 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+.user-info p{
+	font-size: 12px;
+}
+.user-info p span,
+.user-info p a,
+.user-info p b{
+		line-height: 20px;
+    display: inline-block;
+    padding: 2px 10px;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    margin-right: 10px;
+}
+.user-info p b{
+	font-weight: normal;
+}
+.user-info p span{
+	margin-right: 0;
+}
+.user-grade{
+    height: 60px;
+    line-height: 60px;
+    background: #FAFAFA;
+    padding:0 15px;
+}
+.user-grade p span{
+	padding-right: 10px;
+}
+.user-grade a:before,.user-grade p span:before{
+	content: attr(data-font);
+	font-size: 25px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+.user-grade a:before{
+	font-size: 40px;
+}
+.user-grade a:after,.user-grade p span:after{
+	content: attr(data-title);
+}
+.user-grade p span:first-child:before{
+	color: #33cc66;
+}
+.user-grade p span:nth-child(2):before{
+	color: #ff9900;
+}
+.user-grade p span:last-child:before{
+	color: #fa5656;
+}
+.good{
+	color: #33cc66;
+}
+.well{
+	color: #ff9900;
+}
+.bad{
+	color: #fa5656;
+}
+.user-address{
+    height: 45px;
+    line-height: 45px;
+    padding:0 15px;
+}
+.user-address p:before{
+	content: "\e62b";
+	color: #999999;
+	font-size: 20px;
+	margin-right: 5px;
+}
+.user-address a:after{
+	content: "\e606";
+	color: #33cc66;
+  font-size: 20px;
+  padding: 5px 14px;
+}
+.user-role{
+    flex-wrap: wrap;
+    margin: 15px;
+    position: relative;
+}
+.user-role a{
+	  flex-basis: 50%;
+    font-size: 50px;
+    line-height: 50px;
+}
+.user-role a:before{
+	content: attr(data-font);
+	padding-top: 10px;
+}
+.user-role a:after{
+	content: attr(data-title);
+	padding-bottom: 25px;
+  font-size: 16px;
+  color: #333;
+}
+
+.user-role a:first-child:before{
+	color: #fa5656;
+}
+.user-role a:nth-child(2):before{
+	color: #00b1fe;
+}
+.user-role a:nth-child(3):before{
+	color: #ff7612;
+}
+.user-role a:nth-child(4):before{
+	color: #33cc46;
+}
+.user-role .line,.user-role .line-v{
+	position: absolute;
+}
+.user-role div:before{
+	  content: "";
+    position: absolute;
+    left: 0;
+    top: 45%;
+    width: 100%;
+    height: 1px;
+}
+.user-role div:after{
+	content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+.server-title{
+	  height: 45px;
+    line-height: 45px;
+    color: #666;
+    font-size: 16px;
+    text-align: center;
+}
+.server-info{
+    flex-wrap: wrap;
+    padding: 15px;
+}
+.server-info li{
+	  flex-basis: 48%;
+    margin-bottom: 15px;
+}
+.server-info li:nth-child(2n+1){
+		margin-right: 10px;
+}
+.server-info li img{
+	width: 100%;
+}
+.server-info li p span{
+	font-size: 16px;
+}
+.server-info li p b{
+	font-weight: normal;
+}
+.vedio-info{
+	 padding: 15px;
+	 background: #fafafa;
+}
+
