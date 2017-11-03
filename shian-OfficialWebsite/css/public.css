@@ -1,0 +1,90 @@
+
+body,button,dd,div,dl,dt,footer,form,h1,h2,h3,h4,h5,h6,header,input,li,menu,ol,p,td,textarea,ul{margin:0;padding:0}
+body{font:16px/24px Arial,Helvetica,sans-serif}
+input[type=text],input[type=tel]{height:45px;width:380px;background:0 0;color:#333;border: none;}
+textarea{vertical-align: top;width: 350px;height: 120px;background:0 0;color:#333;border: none;margin: 10px 0;}
+dl,ol,ul{list-style:none}
+a{text-decoration: none;}
+.main{margin-top: 128px;}
+.indexPage{width: 1200px;margin: 0 auto;}
+.header {position: fixed;top: 0;z-index: 999;background-color: #fff;min-width: 1200px}
+.main,.header,.footer{width: 100%;min-width: 1200px}
+/*top*/
+.top1{background: #ededed;line-height: 29px;height: 29px;}
+.top1 span{color: #aaa;}
+.top1,.top2{overflow: hidden;}
+.top1 ul,.top2 ul{float: right;}
+.top1 ul li,.top2 ul li{display: inline-block;}
+.top1 ul li a{color: #909090;}
+.top1 ul li:first-child:before{
+	margin-right: 10px;
+	color: #45a349;
+	font-family: iconfont!important;font-style: normal;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;
+	content: "\e612";
+}
+.top1 ul li:first-child{margin-right: 20px;}
+.top1 ul li:first-child + li:before{
+	margin-right: 10px;
+	color: #45a349;
+	font-family: iconfont!important;font-style: normal;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;
+	content: "\e62c";
+}
+.top2{
+	height: 99px;
+    line-height: 99px;
+}
+.top2 img{vertical-align: middle;}
+.top2 ul a{
+	font-size: 18px;
+    color: #000;
+    margin-right: 36px;
+}
+.mr0{margin-right: 0 !important;}
+.top2 ul a:hover{color: #45a349;}
+/*footer*/
+.bottom1{
+	background: #666;
+	color: #fff;
+	font-size: 14px;
+	padding: 60px 0;
+}
+.bottom1>div{
+	overflow: hidden;
+}
+.bottom1>div>img,.bottom1>div ul{
+	float: left;
+}
+.bottom1>div>img{margin-top: 55px;}
+.bottom1>div ul{margin-left: 10%;}
+.bottom1>div div{
+	float: right;
+}
+.bottom1>div div>p{
+	float: left;
+}
+.bottom1>div div p img{
+	width: 140px;
+	height: 140px;
+	margin-bottom: 28px;
+}
+
+.bottom1>div div p:first-child{
+	margin-right: 20px;
+}
+.bottom1>div div p span{
+	 display: block;
+    text-align: center;
+}
+   
+.bottom1>div ul a{padding: 0 14px;color: #fff;}
+.bottom1>div ul a:first-child{padding-left: 0;}
+.pr0{padding-right: 0 !important;}
+.bottom2 div{padding: 29px 0 82px;}
+.bottom2 div:before,.bottom2 div:after{display: block;text-align: center;font-size: 14px;color: #666;}
+.bottom2 div:before{
+	content: "蒙ICP备 14005095号-3";
+	
+}
+.bottom2 div:after{
+	content: "赤峰聚达文化传媒有限公司";
+}

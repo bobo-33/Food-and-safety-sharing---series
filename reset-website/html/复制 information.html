@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>食安共享</title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css" charset="UTF-8"/>		
+		<link rel="stylesheet" type="text/css" href="../css/style.css" charset="UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="../css/page.css"/>
+	</head>
+	<body>
+		<div class="top info-top">
+			<div class="indexPage">
+				<div>
+					<img src="../img/logo.png"/>
+					<div>
+						<a href="">食安共享</a>
+						<a href="">资讯动态</a>
+						<a href="">公司简介</a>
+						<a href="">商务合作 </a>
+						<a href="">联系我们</a>
+					</div>
+				</div>
+				<h1>
+					和谐社会<span>+</span>共建食安
+					<p class="top_left"></p>
+		            <p class="top_right"></p>
+		            <p class="left_top"></p>
+		            <p class="left_bottom"></p>
+		            <p class="right_top"></p>
+		            <p class="right_bottom"></p>
+		            <p class="bottom_left"></p>
+		            <p class="bottom_right"></p>
+				</h1>
+				<p>食安共享是一项利民工程，是基于云计算技术，并与目前通用的监控方案相结合的多功能明厨亮灶信息平台。</p>
+				<ul>
+					<li>明厨亮灶</li>
+					<li>远程管理</li>
+					<li>餐厅管理</li>
+					<li>资讯浏览</li>
+					<li class="no-border">全民监督</li>
+				</ul>
+				<h3>					
+					<span class="icon-font icon-videocam"></span>
+					<span class="icon-font icon-cloud"></span>
+					<span class="icon-font icon-food"></span>
+					<span class="icon-font icon-jilu"></span>
+					<span class="icon-font icon-people"></span>
+				</h3>
+			</div>
+		</div>
+		<div class="main">
+			<div class="news-list">
+				<div class="indexPage">
+			        <!-- item container -->
+			        <table id="itemContainer"></table>
+			        <!-- navigation holder -->
+      				<div class="holder"></div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="indexPage">
+				<p><img src="../img/logo-gray.png"/></p>
+				<ul>
+					<dl>
+						<dd class="pl0"><a href="">食安共享</a></dd>
+						<dd><a href="">资讯动态</a></dd>
+						<dd><a href="">公司简介</a></dd>
+						<dd class="no-border"><a href="">商务合作</a></dd>
+					</dl>
+					<li>公司：苏州食安共享信息技术有限公司</li>
+					<li>网址：www.shaiangongxiang.com</li>
+					<li>地址：苏州市独墅湖东平路281号宏智大厦402室</li>
+					<li>电话：13701308707</li>
+					<li>邮件：wypyw@sina.com</li>
+				</ul>
+				<div>
+					<span><img src="../img/code.png"/></span>
+					<b><img src="../img/code.png"/></b>
+				</div>
+			</div>
+		</div>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="../js/jPages.js"></script>
+		<script type="text/javascript">
+			  $(function(){ 	
+					$.getJSON('pageData.json',function(res){
+						var HTML="";
+						$.each(res.items, function(i,item) {
+								HTML+="<tr id='"+item.did+"'><td width='2%' align='left'> > </td>";
+								HTML+="<td width='78%'>"+item.title+"</td>";
+								HTML+="<td width='20%' align='right'>"+item.time+"</td>";
+								HTML+="</td></tr>";
+								$('#itemContainer').html(HTML);				
+						});
+						$('#itemContainer tr').click(function(){
+							console.log($(this).attr('id'))
+							window.location='复制 news.html#'+$(this).attr('id');//点击某一条新闻给其链接添加一个id
+						})
+						/* initiate the plugin */
+				  	$("div .holder").jPages({
+					      containerID  : "itemContainer",
+					      perPage: 10
+				    });
+					})
+			  });
+  		</script>
+	</body>
+</html>

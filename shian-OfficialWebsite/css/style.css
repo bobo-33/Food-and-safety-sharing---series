@@ -1,0 +1,74 @@
+.diningroom{
+	padding:75px 0 160px;
+}
+.diningroom>div h1,.advantage>div h1,.effect h1,.about-ding>div h1{font-size: 28px;color: #333;font-weight: normal;}
+.diningroom h1{overflow: hidden;}
+.diningroom h1 a{font-weight: normal;font-size: 18px;color:#45a349;float: right;margin-top: 22px;}
+.diningroom>div p,.about-ding>div p{
+	font-size: 20px;
+    color: #333;
+    padding: 33px;
+}
+.diningroom>div div{margin-top: 67px;text-align: center}
+.diningroom>div span,.advantage>div span,.effect span,.about-ding>div span{
+	display: inline-block;
+    width: 10px;
+    height: 40px;
+    background: #45a349;
+    vertical-align: bottom;
+    margin-right: 10px;
+}
+.about-ding{
+	background: #FCFCFC;
+	padding: 58px 0 85px;
+}
+.about-ding>div div{
+	text-align: center;
+	margin-top: 49px;
+}
+
+.advantage{padding: 85px 0 80px;}
+.advantage>div>div{position: relative;margin-top: 80px;}
+.advantage>div ul li{margin-bottom: 29px;}
+.advantage>div ul li{overflow: hidden;}
+.advantage>div ul{display: inline-block;}
+.advantage>div ul li>img,.advantage>div ul li>dl{float: left;}
+.advantage>div>div>img{
+	position: absolute;
+    right: 0;
+    top: -50px;
+}
+    
+.advantage>div ul li>img{margin-right: 17px;}
+.advantage>div ul li>dl{margin-top: 5px;color: #3e3a39;}  
+.mt-color{margin-top: 10px;color: #3e3a39;}
+.effect{
+	padding: 80px 0;
+    background: #fcfcfc;
+}
+.effect>div>div{
+	margin: 80px 0;
+    overflow: hidden;
+} 
+.effect>div div>div{
+	width: 45%;
+	float: left;
+	margin-right: 60px
+}
+
+.effect>div div>div p{
+	margin-top: 20px;
+	color: #3e3a39;
+    font-size: 18px;
+}
+.about-ding{
+	background: #FCFCFC;
+	padding: 58px 0 85px;
+}
+.about-ding>div div{
+	text-align: center;
+	margin-top: 49px;
+}
+.active{
+	color: #45a349 !important;
+}

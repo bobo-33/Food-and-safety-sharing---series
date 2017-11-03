@@ -1,0 +1,158 @@
+/*public--start*/
+.top .indexPage>div,
+.top .indexPage ul,
+.main .food .indexPage,
+.main .share .indexPage,
+.main .solutions .indexPage,
+.footer .indexPage{
+	overflow: hidden;
+}
+.top .indexPage>div img,
+.top .indexPage ul li,
+.main .food .indexPage p,
+.main .share .indexPage dl,
+.main .solutions .indexPage p,
+.footer .indexPage>p,
+.footer .indexPage ul,
+.footer .indexPage div{
+	float: left;
+}
+.top .indexPage>div div,
+.main .food .indexPage dl,
+.main .share .indexPage p,
+.main .solutions .indexPage dl{
+	float: right;
+}
+.top,
+.top .indexPage>div div a{
+	color: #fff;
+}
+.main .show p,
+.main .show dl,
+.footer .indexPage div span:after,
+.footer .indexPage div b:after,
+.top .indexPage h1,
+.top .indexPage>p,
+.top .indexPage h3 span{
+	text-align: center;
+}
+/*public--end*/
+
+.top{background: url(../img/banner.png) no-repeat 0 0;height: 750px;}
+.top .indexPage>div{padding-top: 36px;}
+.top .indexPage>div div a{margin-left: 18px;}
+/*nav--end*/
+.top .indexPage h1{width: 668px;height: 100px;font-size: 62px;line-height: 100px;position: relative;margin: 132px auto 0;}
+.top .indexPage h1 p{position: absolute;display: inline-block;background: #fff;}
+.top_left,.top_right,.bottom_left,.bottom_right{height: 1px;}
+.left_top,.left_bottom,.right_top,.right_bottom{width: 1px;}
+.top_left,.left_top{left: 0;top: 0;}
+.top_right,.right_top{right: 0;top: 0;}
+.bottom_left,.left_bottom{left: 0;bottom: 0;}
+.bottom_right,.right_bottom{right: 0;bottom: 0;}
+.top_left,.top_right,.bottom_left,.bottom_right{width: 30px;}
+.left_top,.right_top,.left_bottom,.right_bottom{height:30px;}          
+.top .indexPage h1 span{font-size: 16px;margin: 0 46px;vertical-align: middle;}
+/*h1--end*/
+.top .indexPage>p{margin-top: 24px;}
+/*p---end*/
+.top .indexPage ul{margin-top: 26px;width: 464px; margin: 26px auto;}
+.top .indexPage ul li{line-height: 18px;padding: 0 14px;border-right: 1px solid #fff;}
+/*ul---end*/
+.top .indexPage h3{width: 735px;margin: 0 auto;}
+.top .indexPage h3 span{display: inline-block;width: 80px;height: 80px;line-height: 80px;margin: 0 30px;
+	border: 1px solid #fff;
+	border-radius: 50px;	
+}
+.top .indexPage h3 span:after{display: inline-block;margin-top: 10px;}
+.top .indexPage h3 .header-videocam:after{content: url(../img/header-1.png);}
+.top .indexPage h3 .header-cloud:after{content: url(../img/header-2.png);}
+.top .indexPage h3 .header-food:after{content: url(../img/header-3.png);}
+.top .indexPage h3 .header-jilu:after{content: url(../img/header-4.png);}
+.top .indexPage h3 .header-people:after{content: url(../img/header-5.png);}
+/*h3--end*/
+/*---------------------------------------------------top---end*/
+.main .food .indexPage dl,
+.main .share .indexPage dl,
+.main .solutions .indexPage dl{width: 60%;margin-top: 74px;}
+.main .food .indexPage dl dt,
+.main .share .indexPage dl dt{font-size: 38px;color: #64c506;line-height: 38px;}
+.main .food .indexPage dl dd,
+.main .share .indexPage dl dd{color: #666;margin-top: 30px;line-height: 28px;}
+.main .solutions{width: 100%;background: #e5f3ff;height: 500px;}
+.main .solutions img{width: 95%;}
+.main .solutions .indexPage{height: 100%;}
+.main .solutions .indexPage p{height: 500px;}
+.main .solutions .indexPage dl{width: 48%;margin-top: 138px;}
+.main .solutions .indexPage dl h3{font-size: 25px;color: #336699;}
+.main .solutions .indexPage dl dt{font-size: 40px;color: #336699;line-height: 40px;margin: 32px 0;}
+.main .solutions .indexPage dl dt span{color: #09b950;}
+.main .solutions .indexPage dl li{font-size: 14px;color: #436f93;}
+.main .show{width: 100%;padding: 60px 0 88px;}
+.main .show dl dt{margin: 30px 0 10px;font-size: 26px;line-height: 26px;}
+.main .show dl dd{font-size: 15px;color: #666;}
+.main .food{border-bottom: 1px solid #ddd;padding-bottom: 85px;margin-bottom: 85px;}
+/*--------------------------------main---end*/
+
+.footer{background: #f3f3f3;padding: 45px 0 32px;}
+.footer .indexPage{font-size: 14px;color: #636363;}
+.footer .indexPage>p{padding: 64px 75px 90px 84px;border-right: 1px solid #ddd;}
+.footer .indexPage ul{line-height: 26px; padding: 25px 100px 32px 60px;}
+.footer .indexPage ul dl dd{display: inline-block; border-right: 1px solid #636363;padding: 0 10px;line-height: 14px;}
+.footer .indexPage ul dl dd a{color: #636363;}
+.footer .indexPage div{padding: 20px 0 32px;}
+.footer .indexPage div span,
+.footer .indexPage div b{
+	display: inline-block;
+}
+.footer .indexPage div span{margin-right: 30px;}
+.footer .indexPage div span:after,
+.footer .indexPage div b:after{
+	display: block;
+}
+.footer .indexPage div span:after{content: "食安共享餐厅版";}
+.footer .indexPage div b:after{content: "食安共享用户版";}
+
+
+
+/*information*/
+.info-top{background-image: url(../img/information-banner.png);}
+.news-list{padding-bottom: 65px;}
+.news-list .indexPage table{width: 93%;}
+.news-list .indexPage table,
+.news-list .indexPage ul{margin: 0 50px;}
+.news-list .indexPage table tr{cursor: pointer;}
+.news-list .indexPage table tr:hover td{color: #f49b44;}
+.news-list .indexPage table td{border-bottom: 1px dotted #bfbfbf;line-height: 40px;color: #666;}
+.news-list .indexPage table td span{margin-right: 15px;}
+.news-list .indexPage .holder{width: 35%;margin: 25px auto 0;}
+.news-list .indexPage .holder a,.news-list .indexPage .holder span{color: #666;margin-right: 26px;}
+.holder a:hover {color: #f49b44 !important;cursor: pointer;}
+.holder a.jp-current, a.jp-current:hover {color: #f49b44 !important;font-weight: bold;}
+.holder a.jp-current, a.jp-current:hover,
+.holder a.jp-disabled, a.jp-disabled:hover {
+    cursor: pointer;
+  }
+/*business*/
+.business-top{background-image: url(../img/news-banner.png);}
+.business-con{padding: 65px 0 150px;}
+.business-con .indexPage p,
+.business-con .indexPage ol{padding-left: 20px;color: #666;}
+.business-con .indexPage ol{margin: 32px 0 36px;}
+/*news*/
+.news-box{margin-top: 0;}
+.news .indexPage>div{
+	font-size: 14px;
+	color: #333;
+	padding: 50px 48px 75px;
+}
+.news .indexPage>div h2{
+	font-size: 20px;
+    text-align: center;
+}
+.news .indexPage>div p{
+    color: #666;
+    text-align: center;
+    margin: 18px 0 48px;
+}
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="apple-mobile-web-app-capable" content="yes" />
+	    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>食安共享流程说明</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="main">
+				<h1>总体步骤</h1>
+				<ol>
+					<li>后端添加餐厅</li>
+					<li>后端添加终端</li>
+					<li>打印终端条码</li>
+					<li>餐厅施工</li>
+					<li>餐厅内局域网设置摄像头、NVR</li>
+					<li>设登录终端客户端备客户端（员工APP）扫码投放终端，并设置摄像头SN以及NVR的SN</li>
+					<li>登录终端客户端</li>
+				</ol>
+			</div>
+			<div class="item-1">
+				<h2>1：后端添加餐厅</h2>
+				<p>在左侧导航选择“餐厅管理”，点击“餐厅管理”下的二级菜单“餐厅信息”进入到餐厅列表页面，然后点击右上角的“新建餐厅”按钮进入到添加餐厅页面：</p>
+				<p><img src="img/item1.png" alt="" /></p>
+				<p>填写餐厅基本信息，然后点击“提交”按钮</p>
+				<p><img src="img/item2.png"/></p>
+				<div>
+					<p>备注：“登录手机号”十分重要，是查询机客户端登录的唯一方式</p>
+					<p>（这里建议用长期稳定的手机号进行填写，餐厅老板的手机号来进行填写）</p>
+				</div>
+			</div>
+			<div class="item-2">
+				<h2>2：后端添加终端</h2>
+				<p>在左侧导航选择“终端管理”，点击“终端管理”下的二级菜单“终端信息管理”进入到终端列表页面，然后点击右上角的“添加终端”按钮进入到添加终端页面：</p>
+				<p><img src="img/item3.png"/></p>
+				<p>填写终端信息，然后点击“添加”按钮</p>
+				<p><img src="img/item4.png"/></p>
+				<div>
+					<ul>
+						<li>“设备SN码”是系统预留字段，目前可随意填写，为必填选项。</li>
+						<li>当设备添加成功时，系统默认将其设置位置为“库房”，</li>
+						<li>在可在后继的步骤中将其投放到某个餐厅。</li>
+					</ul>
+				</div>
+			</div>
+			<div class="item-3">
+				<h2>3：打印终端条码</h2>
+				<p>在“终端信息管理”页面中，列表的右侧点击“打印”，进入到打印条码界面，并配合着条码打印机打印出亚银纸材质的条码标签。</p>
+				<p><img src="img/item5.png"/></p>
+			</div>
+			<div class="item-4">
+				<h2>4：餐厅施工</h2>
+				<p>施工完成要保证局域网的畅通，并且让多个摄像头、NVR以及终端查询机在同一网段内，并且保证外网畅通，以保证查询机可以扫描到本地餐厅内的摄像头。</p>
+				<p>施工后要保留改餐厅简单易懂的不限图，在图中标明个设备位置，布线方式以及餐厅内路由、宽带猫等设备的位置。</p>
+			</div>
+			<div class="item-5">
+				<h2>5：餐厅内局域网设置摄像头、NVR</h2>
+				<p>摄像头设置请参见<a href="">《食安共享摄像头设置文档》</a></p>
+				<p>NVR设置如下图</p>
+				<p><img src="img/1.png"/></p>
+			</div>
+			<div class="item-6">
+				<h2>6：设备客户端（员工APP）扫码投放终端，并设置摄像头SN以及NVR的SN</h2>
+				<p>该步骤由调试工程师使用内部发布的移动APP：“食安共享设备管理”APP来进行，主要目的是标注了设备在系统中终端所对应的餐厅。</p>
+			</div>
+		</div>
+	</body>
+</html>
